@@ -1,3 +1,55 @@
+$days: "mon", "tue", "wed", "thu", "fri", "sat", "sun";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 710px;
+  margin: 50px auto ;
+
+  div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #eee;
+    border: solid 1px black;
+    margin: 0 0 1px 1px;
+
+    &:hover {
+      position: relative;
+      bottom: 20px;
+      background-color: pink;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+@for $i from 1 to 32 {
+  .calendar :nth-child(#{$i}):before {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 0 through 6 {
+  .calendar-#{nth($days, $i+1)} div:first-child {
+    margin-left: $i * 101px;
+  }
+}
+
+.calendar-30 :nth-child(31),
+.calendar-29 :nth-child(31),
+.calendar-29 :nth-child(30),
+.calendar-28 :nth-child(31),
+.calendar-28 :nth-child(30),
+.calendar-28 :nth-child(29) {
+  visibility: hidden;
 }

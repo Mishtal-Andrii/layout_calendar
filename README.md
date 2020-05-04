@@ -1,7 +1,7 @@
 # Calendar
 1. Replace `<your_account>` with your Github username in the links
-    - [DEMO LINK](https://<your_account>.github.io/layout_calendar/)
-    - [TEST REPORT LINK](https://<your_account>.github.io/layout_calendar/report/html_report/)
+    - [DEMO LINK](https://Mishtal-Andrii.github.io/layout_calendar/)
+    - [TEST REPORT LINK](https://Mishtal-Andrii.github.io/layout_calendar/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
     - Write styles in `src/styles/main.scss` instead of `src/style.css`.
     - This task does not have tests so you need to check if it works as expected manually.
@@ -10,7 +10,7 @@ ___
 ## Task
 Display a calendar in the middle of the screen. The HTML of the calendar needs to have the following structure:
 ```html
-<div class="calendar calendar-30 calendar-tue">
+<div class="calendar calendar-30 calendar-mon">
   <div></div>
   <div></div>
   <!--
